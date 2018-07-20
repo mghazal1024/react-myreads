@@ -1,6 +1,6 @@
-# My ReadsThis
+# My Reads
 
- is a small application that allows you to keep track of the books you are reading by organizing them in three categories:
+This is a small application that allows you to keep track of the books you are reading by organizing them in three categories:
 'Currently Readting', 'Want to Read', and 'Read'.
 
 ## Installation
