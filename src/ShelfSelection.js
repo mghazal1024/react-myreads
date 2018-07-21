@@ -12,9 +12,19 @@ class ShelfSelection extends Component {
 
   render() {
 
-    const { book, shelfChange } = this.props
+    const { book, books, shelfChange } = this.props
 
     let defaultShelf = 'none'
+
+
+    // set the current shelf to the books
+    for(let element of books) {
+      if(element.id === book.id) {
+        defaultShelf = element.shelf
+        break
+      }
+    }
+    
 
     return(
       <div className="book-shelf-changer">

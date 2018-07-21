@@ -18,11 +18,19 @@ class BooksApp extends React.Component {
     books: [],
   }
 
+  /*
   componentDidMount() {
     //Gell the books once loaded
     BooksAPI.getAll().then((books) => {
       this.setState({books})
     })
+  }
+  */
+
+
+  async componentDidMount() {
+    const books = await BooksAPI.getAll()
+    this.setState({ books })
   }
 
   // Changing the shelf from the selection menu
