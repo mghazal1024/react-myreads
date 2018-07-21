@@ -45,7 +45,6 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
           <Route path = "/search" render = {({searchHistory}) => (
-            // Search block component is called
             <SearchBooks
               books = { books }
               shelfChange = { this.shelfChange }
@@ -56,7 +55,6 @@ class BooksApp extends React.Component {
               <div className="list-books-title">
                 <h1>MyReads</h1>
               </div>
-              {/* Listing of book component called */}
               <BookListing
                 books = { this.state.books }
                 shelfChange = { this.shelfChange }
