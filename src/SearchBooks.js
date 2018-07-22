@@ -20,10 +20,10 @@ class SearchBooks extends Component {
   // Collect the books based on the search query
   collectBooks = (event) => {
 
-    const searchQuery = event.target.value.trim()
+    const searchQuery = event.target.value
     this.setState({ searchQuery: searchQuery })
 
-    if(searchQuery) {
+    if(searchQuery.trim()) {
       BooksAPI.search(searchQuery, 30).then((books) => {
         if(books.length > 0) {
           this.setState({foundBooks: books, searchError: false })
